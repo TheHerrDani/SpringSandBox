@@ -9,18 +9,18 @@ public class PeopleService {
         this.peopleDao = peopleDao;
     }
 
-    public void savePeople(PeopleDao peopleDaoToSave) {
+    public void savePerson(Person personToSave) {
         //BL
-        peopleDao.setFirstName(peopleDaoToSave.getFirstName().concat(" Teszt"));
-        this.peopleDao.savePeople(peopleDaoToSave);
+        personToSave.setFirstName(personToSave.getFirstName().concat(" Teszt"));
+        this.peopleDao.savePeople(personToSave);
     }
 
-    public void plusYears(PeopleDao peopleDaoToChange, int age) {
-        int newAge = peopleDaoToChange.getAge() + age;
-        peopleDaoToChange.setAge(newAge);
+    public void plusYears(Person personToSave, int age) {
+        int newAge = personToSave.getAge() + age;
+        personToSave.setAge(newAge);
     }
 
-    public List<PeopleDao> getPeoples() {
-        return peopleDao.getPeoples();
+    public List<Person> getPeoples() {
+        return peopleDao.getPeople();
     }
 }

@@ -14,6 +14,6 @@ public class PeopleDaoTests {
     public void testSavePeople(){
         PeopleDao testDao = new PeopleDao(1,"Hund","Jóska","valami@gmail.com",18);
         peopleDao.savePeople(testDao);
-        assertEquals(List.of(testDao),peopleDao.getPeoples());
+        assertEquals(List.of(testDao),peopleDao.getPeople());
     }
 }

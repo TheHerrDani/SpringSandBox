@@ -2,7 +2,7 @@ package com.WebShop_Quince.Daniel_Sipos_Project;
 
 import People.PeopleDao;
 import People.PeopleService;
-import org.springframework.boot.SpringApplication;
+import People.Person;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -18,11 +18,11 @@ public class DanielSiposProjectApplication {
 			PeopleDao peopleDao = (PeopleDao) context.getBean("peopleDao");
 
 			PeopleDao peopleDao2 = context.getBean(PeopleDao.class);
-			peopleDao2.savePeople(new PeopleDao(1,"Daniel","Sipos", "Sipos.Herr.Dani@gmail.com",18));
-			System.out.println(peopleDao2.getPeoples());
+			peopleDao2.savePeople(new Person(1,"Daniel","Sipos", "Sipos.Herr.Dani@gmail.com",18));
+			System.out.println(peopleDao2.getPeople());
 
 			PeopleService peopleService = (PeopleService) context.getBean("peopleService");
-			peopleService.savePeople(new PeopleDao(1,"Daniel","Sipos", "Sipos.Herr.Dani@gmail.com",18));
+			peopleService.savePerson(new Person(1,"Daniel","Sipos", "Sipos.Herr.Dani@gmail.com",18));
 			System.out.println(peopleService.getPeoples());
 
 		}
